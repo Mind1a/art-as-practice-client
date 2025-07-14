@@ -3,10 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "clean": "rimraf .next && rimraf node_modules && pnpm install",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "react": "^19.0.0",
