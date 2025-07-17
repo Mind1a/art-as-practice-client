@@ -34,7 +34,11 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
-  }
+  },
+  "i18n-ally.localesPaths": [
+    "feature/i18n",
+    "feature/i18n/messages"
+  ]
 
   // Optional: Disable built-in formatter for conflicting languages (only if needed)
   // "prettier.enableDebugLogs": false
