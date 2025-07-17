@@ -10,7 +10,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({
   return (
     <Link
       href={href}
-      className={`inline-block rounded px-4 py-2 ${className} transition hover:opacity-80`}
+      className={`inline-block rounded py-3 px-4${className} transition hover:opacity-80`}
     >
       {text}
     </Link>

@@ -1,26 +1,18 @@
-"use client"
 import Image from "next/image"
-import { useState } from "react"
 import CustomButton from "../primitives/Button"
 import { navLinks } from "feature/landing/data/landingData"
+import BurgerMenu from "./BurgerMenu"
+import LocaleSwitcherSelect from "feature/i18n/components/LocaleSwitcherSelect"
 
 const Header = () => {
   return (
-    <header className="mx-auto flex h-[100px] w-full items-center justify-between bg-[aqua] px-4 lg:max-w-[1440px] lg:px-8">
+    <header className="relative mx-auto flex h-[100px] w-full items-center justify-between bg-[aqua] px-4 lg:max-w-[1440px] lg:px-8">
       <div className="flex items-center justify-center">
         <Image
           src="/images/svg/siteLogo.svg"
           width={46}
           height={40}
           alt="siteLogo"
-        />
-      </div>
-      <div className="block lg:hidden">
-        <Image
-          src="/images/svg/burgerMenu.svg"
-          width={30}
-          height={20}
-          alt="burgerMenu"
         />
       </div>
 
@@ -33,14 +25,15 @@ const Header = () => {
           ))}
         </ul>
       </nav>
-
-      <div className="hidden lg:block">
+      <div className="hidden justify-between gap-4 lg:flex">
+        <LocaleSwitcherSelect />
         <CustomButton
           text="Registration"
           href="/"
-          className="flex w-[87px] items-center justify-center bg-[#575757] text-center text-[10px] text-white hover:bg-[#F2430D]"
+          className="flex w-[120px] items-center justify-center bg-[#575757] text-center text-[15px] text-white hover:bg-[#F2430D]"
         />
       </div>
+      <BurgerMenu />
     </header>
   )
 }

@@ -3,8 +3,8 @@ import { Locale, routing, usePathname, useRouter } from "../../routing"
 import { useParams } from "next/navigation"
 
 type Props = {
-  defaultValue: string
-  label: string
+  defaultValue?: string
+  label?: string
 }
 
 const LocaleSwitcherSelect = ({ defaultValue, label }: Props) => {
@@ -26,7 +26,7 @@ const LocaleSwitcherSelect = ({ defaultValue, label }: Props) => {
       defaultValue={defaultValue}
       onChange={onSelectChange}
       aria-label={label}
-      className="rounded border bg-transparent px-2 py-1 text-sm"
+      className="h-[43px] w-[63px] rounded border bg-transparent px-2 py-1 text-sm"
     >
       {routing.locales.map((locale) => (
         <option key={locale} value={locale}>
