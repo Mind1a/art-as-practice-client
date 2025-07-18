@@ -7,7 +7,7 @@ import BurgerMenu from "./BurgerMenu"
 
 const Header = () => {
   return (
-    <header className="relative mx-auto flex h-[100px] w-full items-center justify-between bg-[aqua] px-4 lg:max-w-[1440px] lg:px-8">
+    <header className="relative mx-auto flex h-[100px] w-full items-center justify-between px-4 lg:max-w-[1440px] lg:px-8">
       <div className="flex items-center justify-center">
         <Image
           src="/images/svg/siteLogo.svg"
