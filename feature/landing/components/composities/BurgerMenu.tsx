@@ -67,7 +67,7 @@ const BurgerMenu = () => {
                   >
                     <Link href={item.href} onClick={() => setIsOpen(false)}>
                       <li className="cursor-pointer border-b border-[#A8A8A8] py-[10px]">
-                        <p className="text-black">{item.label}</p>
+                        <p className="text-[#575757]">{item.label}</p>
                       </li>
                     </Link>
                   </ul>
