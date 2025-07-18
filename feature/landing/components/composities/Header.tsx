@@ -31,7 +31,7 @@ const Header = () => {
         <CustomButton
           text="Registration"
           href="/"
-          className="flex w-[120px] items-center justify-center bg-[#575757] text-center text-[15px] text-white hover:bg-[#F2430D]"
+          className="flex w-[120px] items-center justify-center bg-[#F2430D] text-center text-[15px] text-white hover:bg-[#F2430D]"
         />
       </div>
       <BurgerMenu />
