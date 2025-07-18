@@ -1,8 +1,9 @@
+"use client"
 import Image from "next/image"
 import CustomButton from "../primitives/Button"
 import { navLinks } from "feature/landing/data/landingData"
-import BurgerMenu from "./BurgerMenu"
 import LocaleSwitcherSelect from "feature/i18n/components/LocaleSwitcherSelect"
+import BurgerMenu from "./BurgerMenu"
 
 const Header = () => {
   return (
