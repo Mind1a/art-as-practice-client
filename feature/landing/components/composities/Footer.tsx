@@ -39,7 +39,7 @@ const Footer = () => {
               width={18}
               src="/images/svg/facebook.svg"
             />
-            <span>Facebook</span>
+            <span className="text-[#575757]">Facebook</span>
           </div>
           <div className="flex items-center gap-1">
             <Image
@@ -48,7 +48,7 @@ const Footer = () => {
               width={18}
               src="/images/svg/instagram.svg"
             />
-            <span>Instagram</span>
+            <span className="text-[#575757]">Instagram</span>
           </div>
           <div className="flex items-center gap-1">
             <Image
@@ -57,7 +57,7 @@ const Footer = () => {
               width={18}
               src="/images/svg/linkedin.svg"
             />
-            <span>LinkedIn</span>
+            <span className="text-[#575757]">LinkedIn</span>
           </div>
         </div>
       </div>
@@ -74,7 +74,7 @@ const Footer = () => {
               width={15}
               src="/images/svg/facebook.svg"
             />
-            <span>Facebook</span>
+            <span className="text-[#575757]">Facebook</span>
           </div>
         </div>
 
@@ -87,7 +87,7 @@ const Footer = () => {
               width={15}
               src="/images/svg/instagram.svg"
             />
-            <span>Instagram</span>
+            <span className="text-[#575757]">Instagram</span>
           </div>
         </div>
 
@@ -102,7 +102,7 @@ const Footer = () => {
               width={15}
               src="/images/svg/linkedin.svg"
             />
-            <span>LinkedIn</span>
+            <span className="text-[#575757]">LinkedIn</span>
           </div>
         </div>
       </div>
