@@ -5,6 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
 import CustomButton from "../primitives/Button"
+import LocaleSwitcherButtons from "../primitives/BurgerLangSelector"
 
 const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -57,6 +58,11 @@ const BurgerMenu = () => {
                       height={14}
                       alt="Close menu"
                     />
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <LocaleSwitcherButtons />
                   </div>
                 </div>
 
