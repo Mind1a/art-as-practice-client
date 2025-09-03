@@ -1,111 +1,78 @@
-"use client"
 import Image from "next/image"
+import Link from "next/link"
 
 const Footer = () => {
   return (
-    <footer className="mx-auto flex w-full flex-row items-center justify-between border-t border-[#A8A8A8] px-[32px] py-[40px] lg:h-[240px] lg:max-w-[1440px] lg:px-10 lg:py-6">
-      <div className="flex min-w-[90px] justify-start lg:ml-[32px]">
-        <div className="block lg:hidden">
-          <Image
-            alt="Logo"
-            width={58}
-            height={47}
-            src="/images/svg/siteLogo.svg"
-          />
-        </div>
-
-        <div className="hidden lg:block">
-          <Image
-            alt="Logo"
-            width={88}
-            height={72}
-            src="/images/svg/siteLogo.svg"
-          />
-        </div>
+    <footer className="flex w-full items-center justify-between border-t border-[#a8a8a8] bg-[#ffffff] px-[32px] py-6 lg:h-[240px] lg:px-10">
+      <div className="flex h-[47px] w-[58px] shrink-0 items-center lg:h-[72px] lg:w-[88px]">
+        <Image
+          src="/images/svg/AAPLogo.svg"
+          alt="logo"
+          width={88}
+          height={72}
+        />
       </div>
 
-      <div className="hidden w-2/3 flex-col items-end text-sm text-[#575757] lg:mr-[32px] lg:flex">
-        <div className="flex gap-[16px] leading-[24px]">
+      <div className="flex flex-row items-end gap-[32px] text-right text-sm text-gray-700 lg:flex-col lg:gap-[24px]">
+        <div className="flex flex-col flex-wrap gap-4 text-[10px] lg:flex-row lg:text-[16px]">
           <span>10 Dodo Abashidze St T'bilisi</span>
-          <span>+995 567 567 567</span>
-          <span>Artaspractice20@gmail.com</span>
-        </div>
-
-        <div className="flex gap-[24px] pt-[24px] text-[#575757]">
-          <div className="flex items-center gap-1">
-            <Image
-              alt="Facebook"
-              height={18}
-              width={18}
-              src="/images/svg/facebook.svg"
-            />
-            <span className="text-[#575757]">Facebook</span>
-          </div>
-          <div className="flex items-center gap-1">
-            <Image
-              alt="Instagram"
-              height={18}
-              width={18}
-              src="/images/svg/instagram.svg"
-            />
-            <span className="text-[#575757]">Instagram</span>
-          </div>
-          <div className="flex items-center gap-1">
-            <Image
-              alt="LinkedIn"
-              height={18}
-              width={18}
-              src="/images/svg/linkedin.svg"
-            />
-            <span className="text-[#575757]">LinkedIn</span>
-          </div>
-        </div>
-      </div>
-
-      <div className="flex w-full min-w-[320px] flex-col gap-2 px-2 lg:hidden">
-        <div className="flex items-center justify-between gap-2">
-          <span className="text-[12px] text-[#575757]">
-            10 Dodo Abashidze St T'bilisi
-          </span>
-          <div className="flex items-center gap-[4px] text-[10px] text-[#575757]">
-            <Image
-              alt="Facebook"
-              height={16}
-              width={15}
-              src="/images/svg/facebook.svg"
-            />
-            <span className="text-[#575757]">Facebook</span>
-          </div>
-        </div>
-
-        <div className="flex items-center justify-between gap-2">
-          <span className="text-[12px] whitespace-nowrap text-[#575757]">
+          <Link
+            href="tel:+995567567567"
+            className="whitespace-nowrap hover:underline"
+          >
             +995 567 567 567
-          </span>
-          <div className="flex items-center gap-[4px] text-[10px] text-[#575757]">
-            <Image
-              alt="Instagram"
-              height={16}
-              width={15}
-              src="/images/svg/instagram.svg"
-            />
-            <span className="text-[#575757]">Instagram</span>
-          </div>
+          </Link>
+          <Link
+            href="mailto:Artaspractice20@gmail.com"
+            className="whitespace-nowrap hover:underline"
+          >
+            Artaspractice20@gmail.com
+          </Link>
         </div>
 
-        <div className="flex items-center justify-between gap-2">
-          <span className="text-[12px] text-[#575757]">
-            Artaspractice20@gmail.com
-          </span>
-          <div className="mr-[5px] flex items-center gap-[4px] text-[10px] text-[#575757]">
+        <div className="mt-2 flex flex-col gap-4 lg:flex-row">
+          <Link
+            href="#"
+            aria-label="Facebook"
+            className="flex items-center text-[#575757] hover:text-orange-800 lg:gap-[13px]"
+          >
             <Image
-              alt="LinkedIn"
-              height={16}
-              width={15}
-              src="/images/svg/linkedin.svg"
+              src="/images/svg/fb.svg"
+              alt="Instagram"
+              width={18}
+              height={18}
+              className="h-[16] w-[16px] lg:h-[18px] lg:w-[18px]"
             />
-            <span className="text-[#575757]">LinkedIn</span>
-          </div>
+            <span className="ml-1 text-[10px] lg:text-[16px]">Facebook</span>
+          </Link>
+          <Link
+            href="#"
+            aria-label="Instagram"
+            className="flex items-center text-[#575757] hover:text-orange-800 lg:gap-[13px]"
+          >
+            <Image
+              src="/images/svg/ig.svg"
+              alt="Facebook"
+              width={18}
+              height={18}
+              className="h-[16] w-[16px] lg:h-[18px] lg:w-[18px]"
+            />
+            <span className="ml-1 text-[10px] lg:text-[16px]">Instagram</span>
+          </Link>
+          <Link
+            href="#"
+            aria-label="LinkedIn"
+            className="flex items-center text-[#575757] hover:text-orange-800 lg:gap-[13px]"
+          >
+            <Image
+              src="/images/svg/lnkdin.svg"
+              alt="LinkedIn"
+              width={18}
+              height={18}
+              className="h-[16] w-[16px] lg:h-[18px] lg:w-[18px]"
+            />
+            <span className="ml-1 text-[10px] lg:text-[16px]">Linkedin</span>
+          </Link>
         </div>
       </div>
     </footer>
