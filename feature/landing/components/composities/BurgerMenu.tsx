@@ -16,12 +16,12 @@ const BurgerMenu = () => {
         className="right-4 cursor-pointer"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <Image
+        {/* <Image
           src="/images/svg/burgerMenu.svg"
           width={30}
           height={20}
           alt="Open menu"
-        />
+        /> */}
       </div>
 
       <AnimatePresence>
