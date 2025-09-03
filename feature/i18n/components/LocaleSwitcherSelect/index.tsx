@@ -35,7 +35,7 @@ const LocaleSwitcherSelect = ({ defaultValue, label }: Props) => {
       defaultValue={defaultValue}
       onChange={onSelectChange}
       aria-label={label}
-      className="h-[47px] w-[63px] appearance-none rounded-[8px] border border-black bg-transparent px-0 text-center text-[15px] font-[600] text-black focus:outline-none"
+      className="w-[63px] appearance-none rounded-[8px] border border-black bg-transparent px-0 py-3 text-center text-[15px] font-[600] text-black focus:outline-none"
     >
       {routing.locales.map((locale) => (
         <option key={locale} value={locale}>
