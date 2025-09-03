@@ -52,12 +52,12 @@ const BurgerMenu = () => {
                     onClick={() => setIsOpen(false)}
                     className="cursor-pointer"
                   >
-                    {/* <Image
+                    <Image
                       src="/images/svg/xIcon.svg"
                       width={14}
                       height={14}
                       alt="Close menu"
-                    /> */}
+                    />
                   </div>
                 </div>
                 <div>
