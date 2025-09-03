@@ -45,9 +45,9 @@ const BurgerMenu = () => {
               exit={{ x: "100%" }}
               transition={{ duration: 0.5 }}
             >
-              <div className="flex h-full w-full flex-col items-center gap-[30px] px-[30px]">
-                <div className="flex h-[100px] w-full max-w-[300px] items-center justify-between border-b border-[#A8A8A8]">
-                  <p className="text-lg font-semibold text-black">Menu</p>
+              <div className="flex h-full w-full flex-col items-center px-[30px]">
+                <div className="mt-[20px] flex w-full max-w-[300px] items-center justify-between border-b border-[#A8A8A8] px-[12] py-[12px]">
+                  <p className="text-lg font-semibold text-[#575757]">Menu</p>
                   <div
                     onClick={() => setIsOpen(false)}
                     className="cursor-pointer"
@@ -61,28 +61,26 @@ const BurgerMenu = () => {
                   </div>
                 </div>
                 <div>
-                  <div>
+                  <div className="mt-4 flex w-[300px] justify-end pr-6">
                     <LocaleSwitcherButtons />
                   </div>
                 </div>
-
-                {navLinks.map((item) => (
-                  <ul
-                    key={item.id}
-                    className="flex w-full max-w-[300px] flex-col gap-4"
-                  >
-                    <Link href={item.href} onClick={() => setIsOpen(false)}>
-                      <li className="cursor-pointer border-b border-[#A8A8A8] py-[10px]">
-                        <p className="text-[#575757]">{item.label}</p>
-                      </li>
-                    </Link>
-                  </ul>
-                ))}
+                <div className="mb-[30px] flex w-full max-w-[300px] flex-col gap-4">
+                  {navLinks.map((item) => (
+                    <ul key={item.id}>
+                      <Link href={item.href} onClick={() => setIsOpen(false)}>
+                        <li className="cursor-pointer border-b border-[#A8A8A8] py-[10px]">
+                          <p className="text-[#575757]">{item.label}</p>
+                        </li>
+                      </Link>
+                    </ul>
+                  ))}
+                </div>
 
                 <CustomButton
                   text="Registration"
                   href="/"
-                  className="flex w-full items-center justify-center border border-[#F2430D] pt-3 text-center text-[15px] text-[#F2430D] hover:bg-[#F2430D]"
+                  className="flex w-full items-center justify-end rounded-[8px] border border-[#F2430D] pt-3 text-center text-[15px] font-[600] text-[#F2430D] hover:bg-[#F2430D]"
                 />
               </div>
             </motion.div>

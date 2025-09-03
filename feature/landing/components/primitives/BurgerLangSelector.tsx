@@ -16,11 +16,11 @@ const LocaleSwitcherButtons = () => {
   return (
     <div className="flex w-[134px] justify-end gap-2">
       <button
-        onClick={() => changeLocale("en")}
+        onClick={() => changeLocale("eng")}
         className={`h-[43px] min-w-[63px] rounded-[8px] border px-3 py-1 font-medium transition-colors ${
-          currentLocale === "en"
+          currentLocale === "eng"
             ? "border-[#F2430D] bg-white text-orange-500"
-            : "border-gray-300 bg-white text-black hover:bg-gray-50"
+            : "border-[#00000] bg-white text-black hover:bg-gray-50"
         }`}
       >
         ENG
@@ -30,7 +30,7 @@ const LocaleSwitcherButtons = () => {
         className={`h-[43px] min-w-[63px] rounded-[8px] border px-3 py-1 font-medium transition-colors ${
           currentLocale === "ka"
             ? "border-orange-500 bg-white text-orange-500"
-            : "border-gray-300 bg-white text-black hover:bg-gray-50"
+            : "border-[#000000] bg-white text-black hover:bg-gray-50"
         }`}
       >
         GEO

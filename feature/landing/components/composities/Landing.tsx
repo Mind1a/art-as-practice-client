@@ -6,7 +6,6 @@ const Landing = () => {
   return (
     <div>
       <Header />
-      {/* <Footer /> */}
     </div>
   )
 }
