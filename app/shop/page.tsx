@@ -34,7 +34,7 @@ const Shop = () => {
   const currentCards = cardsData.slice(startIndex, endIndex);
 
   return (
-    <div className="px-6 lg:px-8">
+    <div className="mx-auto px-6 lg:px-8 max-w-[1376px]">
       {/* Heading */}
       <Heading />
 
