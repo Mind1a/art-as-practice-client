@@ -2,6 +2,7 @@ import ItemDescription from "@/feature/shop/components/ItemDescription";
 import ItemGallery from "@/feature/shop/components/ItemGallery";
 import ItemHeading from "@/feature/shop/components/ItemHeading";
 import ItemId from "@/feature/shop/components/ItemId";
+import ItemPurchase from "@/feature/shop/components/ItemPurchase";
 
 const ShopItem = () => {
   return (
@@ -10,6 +11,7 @@ const ShopItem = () => {
       <ItemId />
       <ItemGallery />
       <ItemDescription />
+      <ItemPurchase />
     </div>
   );
 };

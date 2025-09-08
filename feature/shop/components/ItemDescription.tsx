@@ -1,6 +1,6 @@
 const ItemDescription = () => {
   return (
-    <div className="flex flex-col gap-4 pt-6 pb-[102px]">
+    <div className="lg:hidden flex flex-col gap-4 pt-6 pb-[102px]">
       <h2 className="font-semibold text-2xl">Teqnika teqnika teqnika</h2>
       <h3 className="font-bold text-[#373737] text-sm/[20px]">size</h3>
       <p className="font-normal text-[#373737] text-sm/[20px]">
