@@ -80,7 +80,7 @@ const BurgerMenu = () => {
                 <CustomButton
                   text="Registration"
                   href="/"
-                  className="flex w-full items-center justify-end rounded-[8px] border border-[#F2430D] pt-3 text-center text-[15px] font-[600] text-[#F2430D] hover:bg-[#F2430D]"
+                  className="flex w-full items-center justify-end rounded-[8px] border border-[#F2430D] pt-3 text-center text-[15px] font-[600] text-[#F2430D] hover:bg-[#F2430D] hover:text-[#ffffff]"
                 />
               </div>
             </motion.div>
