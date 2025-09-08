@@ -33,7 +33,7 @@ const Footer = () => {
         <div className="mt-2 flex flex-col gap-4 lg:flex-row">
           <Link
             href="#"
-            aria-label="Facebook"
+            aria-label="Instagram"
             className="flex items-center text-[#575757] hover:text-orange-800 lg:gap-[13px]"
           >
             <Image
@@ -41,9 +41,11 @@ const Footer = () => {
               alt="Instagram"
               width={18}
               height={18}
-              className="h-[16] w-[16px] lg:h-[18px] lg:w-[18px]"
+              className="h-[16px] w-[16px] lg:h-[18px] lg:w-[18px]"
             />
-            <span className="ml-1 text-[10px] lg:text-[16px]">Facebook</span>
+            <span className="ml-[6px] text-[10px] lg:ml-0 lg:text-[16px]">
+              Facebook
+            </span>
           </Link>
           <Link
             href="#"
@@ -52,12 +54,14 @@ const Footer = () => {
           >
             <Image
               src="/images/svg/ig.svg"
-              alt="Facebook"
+              alt="Instagram"
               width={18}
               height={18}
-              className="h-[16] w-[16px] lg:h-[18px] lg:w-[18px]"
+              className="h-[16px] w-[16px] lg:h-[18px] lg:w-[18px]"
             />
-            <span className="ml-1 text-[10px] lg:text-[16px]">Instagram</span>
+            <span className="ml-[6px] text-[10px] lg:ml-0 lg:text-[16px]">
+              Instagram
+            </span>
           </Link>
           <Link
             href="#"
@@ -69,9 +73,11 @@ const Footer = () => {
               alt="LinkedIn"
               width={18}
               height={18}
-              className="h-[16] w-[16px] lg:h-[18px] lg:w-[18px]"
+              className="h-[16px] w-[16px] lg:h-[18px] lg:w-[18px]"
             />
-            <span className="ml-1 text-[10px] lg:text-[16px]">Linkedin</span>
+            <span className="lg:ml-0text-[10px] ml-[6px] lg:text-[16px]">
+              Linkedin
+            </span>
           </Link>
         </div>
       </div>
