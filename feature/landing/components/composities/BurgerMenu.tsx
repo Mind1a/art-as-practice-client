@@ -11,7 +11,7 @@ const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div className="z-[999] flex items-center lg:hidden">
+    <div className="z-[999] flex h-full items-center overflow-y-auto lg:hidden">
       <div
         className="right-4 cursor-pointer"
         onClick={() => setIsOpen(!isOpen)}
@@ -39,7 +39,7 @@ const BurgerMenu = () => {
 
             <motion.div
               key="burger-menu"
-              className="fixed top-0 right-0 z-40 flex min-h-[852px] w-full max-w-[308px] justify-center overflow-y-auto rounded-[24px] border-l border-[#FFFFFF40] bg-white"
+              className="fixed top-0 right-0 z-40 flex h-screen w-full max-w-[308px] justify-center overflow-y-auto rounded-[24px] border-l border-[#FFFFFF40] bg-white"
               initial={{ x: "100%" }}
               animate={{ x: "0%" }}
               exit={{ x: "100%" }}

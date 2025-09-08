@@ -42,10 +42,10 @@ const LocaleSwitcherSelect = ({ defaultValue, label }: DropDpwnMenuProps) => {
   }, [])
 
   return (
-    <div ref={dropdownRef} className="relative inline-block text-left">
+    <div ref={dropdownRef} className="relative">
       <button
         onClick={() => setOpen((prev) => !prev)}
-        className="flex w-[63px] cursor-pointer items-center justify-center rounded-lg border border-black bg-transparent px-3 py-3 text-[15px] font-semibold text-black"
+        className="flex w-[63px] cursor-pointer items-center justify-center rounded-[8px] border border-[#000000] bg-transparent px-3 py-3 text-[15px] font-semibold text-[#000000]"
         aria-label={label}
       >
         {selected.toUpperCase()}
@@ -58,7 +58,7 @@ const LocaleSwitcherSelect = ({ defaultValue, label }: DropDpwnMenuProps) => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -10, scale: 0.95 }}
             transition={{ duration: 0.2, ease: "easeOut" }}
-            className="absolute left-0 z-10 mt-1 w-[63px] rounded-lg border border-[#000000] bg-white shadow-lg"
+            className="absolute left-0 z-10 mt-1 w-[63px] rounded-[8px] border border-[#000000] bg-[#ffffff] shadow-lg"
           >
             {routing.locales.map((locale) => (
               <motion.div
