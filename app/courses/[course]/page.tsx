@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import banner from "../../../feature/courses/assets/banner.png";
-import { consultationPoints } from "../../../feature/courses/data/data";
+import banner from "@feature/courses/assets/banner.png";
+import { consultationPoints } from "@feature/courses/data/data";
 
 function CoursePage() {
   return (

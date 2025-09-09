@@ -1,7 +1,7 @@
-import course1 from "../../courses/assets/course1.png";
-import course2 from "../../courses/assets/course2.png";
-import course3 from "../../courses/assets/course3.png";
-import course4 from "../../courses/assets/course4.png";
+import course1 from "@feature/courses/assets/course1.png";
+import course2 from "@feature/courses/assets/course2.png";
+import course3 from "@feature/courses/assets/course3.png";
+import course4 from "@feature/courses/assets/course4.png";
 
 export const courseCardsContent = [{
     image: course1,
