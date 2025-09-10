@@ -54,9 +54,7 @@ const Pagination = ({
         )}
 
         {/* Dots (only if there are more than 3 pages) */}
-        {totalPages > 3 && (
-          <span className="p-2 w-9 text-[#325471] cursor-pointer">...</span>
-        )}
+        {totalPages > 3 && <span className="p-2 w-9 text-[#325471]">...</span>}
 
         {/* Last Page (only if > 2) */}
         {totalPages > 2 && (

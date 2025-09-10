@@ -40,7 +40,7 @@ const Shop = () => {
 
       {/* body */}
       <div className="flex flex-col items-center pt-14 lg:pt-[135px] pb-[102px]">
-        <div className="gap-16 md:gap-x-6 lg:gap-x-[211px] lg:gap-y-[112px] grid grid-cols-1 md:grid-cols-2 mb-16">
+        <div className="gap-16 md:gap-x-6 lg:gap-x-[211px] lg:gap-y-[112px] grid grid-cols-1 md:grid-cols-2 mb-16 lg:px-[97.5px] w-full">
           {currentCards.map((cardData) => (
             <Link href={`/shop/${cardData.id}`} key={cardData.id}>
               <Card cardData={cardData} />
