@@ -5,3 +5,7 @@ export type CustomButtonProps = {
   textColor?: string
   className?: string
 }
+export type DropDpwnMenuProps = {
+  defaultValue?: string
+  label?: string
+}

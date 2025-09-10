@@ -21,8 +21,8 @@ const Header = () => {
         </Link>
       </div>
 
-      <nav className="hidden max-w-[900px] flex-1 justify-center lg:flex">
-        <ul className="flex gap-[132px] text-sm text-[15px] text-[#575757]">
+      <nav className="hidden flex-1 justify-center lg:flex">
+        <ul className="flex w-[593px] justify-between text-sm text-[15px] text-[#575757]">
           {navLinks.map((link) => (
             <li key={link.id}>
               <a href={link.href}>{link.label}</a>
