@@ -1,7 +1,7 @@
-import { PaginationProps } from "../lib/shopTypes";
+import { PaginationProps } from "../../lib/shopTypes";
 import Image from "next/image";
-import back from "../assets/back-button.png";
-import forward from "../assets/forward-button.png";
+import back from "../../assets/back-button.png";
+import forward from "../../assets/forward-button.png";
 
 const Pagination = ({
   currentPage,

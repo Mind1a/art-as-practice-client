@@ -1,4 +1,4 @@
-import { CardTypes } from "../lib/shopTypes";
+import { CardTypes } from "../../lib/shopTypes";
 import Image from "next/image";
 
 const Card = ({ cardData }: { cardData: CardTypes }) => {

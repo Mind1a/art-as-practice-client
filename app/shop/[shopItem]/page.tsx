@@ -1,19 +1,7 @@
-import ItemDescription from "@/feature/shop/components/ItemDescription";
-import ItemGallery from "@/feature/shop/components/ItemGallery";
-import ItemHeading from "@/feature/shop/components/ItemHeading";
-import ItemId from "@/feature/shop/components/ItemId";
-import ItemPurchase from "@/feature/shop/components/ItemPurchase";
+import ShopItem from "@/feature/shop/components/composites/ShopItem";
 
-const ShopItem = () => {
-  return (
-    <div className="mx-auto px-6 lg:px-8 max-w-[1376px]">
-      <ItemHeading />
-      <ItemId />
-      <ItemGallery />
-      <ItemDescription />
-      <ItemPurchase />
-    </div>
-  );
+const ShopItemPage = () => {
+  return <ShopItem />;
 };
 
-export default ShopItem;
+export default ShopItemPage;
