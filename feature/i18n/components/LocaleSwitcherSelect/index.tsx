@@ -13,11 +13,13 @@ const LocaleSwitcherSelect = ({ defaultValue, label }: DropDpwnMenuProps) => {
 
   const [open, setOpen] = useState(false)
   const [selected, setSelected] = useState(defaultValue || currentLocale)
+  const [firstLoad, setFirstLoad] = useState(true) // 👉 პირველად true
   const dropdownRef = useRef<HTMLDivElement>(null)
 
   const changeLocale = (locale: Locale) => {
     setSelected(locale)
     setOpen(false)
+    setFirstLoad(false) // 👉 ენის არჩევის შემდეგ ღილაკი იღებს ფერს
     router.replace(
       // @ts-expect-error
       { pathname, params },
@@ -45,7 +47,11 @@ const LocaleSwitcherSelect = ({ defaultValue, label }: DropDpwnMenuProps) => {
     <div ref={dropdownRef} className="relative">
       <button
         onClick={() => setOpen((prev) => !prev)}
-        className="flex w-[63px] cursor-pointer items-center justify-center rounded-[8px] border border-[#000000] bg-transparent px-3 py-3 text-[15px] font-semibold text-[#000000]"
+        className={`flex w-[63px] cursor-pointer items-center justify-center rounded-[8px] border px-3 py-3 text-[15px] font-semibold transition-colors duration-200 ease-in-out ${
+          firstLoad
+            ? "border-[#000000] bg-transparent text-[#000000]"
+            : "border-[#F2430D] bg-[#F2430D] text-[#ffffff]"
+        }`}
         aria-label={label}
       >
         {selected.toUpperCase()}
@@ -58,13 +64,17 @@ const LocaleSwitcherSelect = ({ defaultValue, label }: DropDpwnMenuProps) => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -10, scale: 0.95 }}
             transition={{ duration: 0.2, ease: "easeOut" }}
-            className="absolute left-0 z-10 mt-1 w-[63px] rounded-[8px] border border-[#000000] bg-[#ffffff] shadow-lg"
+            className="absolute left-0 z-10 mt-1 w-[63px] overflow-hidden rounded-[8px] border border-[#000000] bg-[#ffffff] shadow-lg"
           >
             {routing.locales.map((locale) => (
               <motion.div
                 key={locale}
                 onClick={() => changeLocale(locale)}
-                className="cursor-pointer px-3 py-2 text-center text-[15px] text-[#000000]"
+                className={`cursor-pointer px-3 py-2 text-center text-[15px] font-[600] ${
+                  selected === locale && !firstLoad
+                    ? "bg-[#F2430D] text-[#ffffff]"
+                    : "text-[#000000] hover:bg-[#F2430D] hover:text-[#ffffff]"
+                }`}
               >
                 {locale.toUpperCase()}
               </motion.div>

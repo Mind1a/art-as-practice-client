@@ -39,7 +39,7 @@ const BurgerMenu = () => {
 
             <motion.div
               key="burger-menu"
-              className="fixed top-0 right-0 z-40 flex h-screen w-full max-w-[308px] justify-center overflow-y-auto rounded-[24px] border-l border-[#FFFFFF40] bg-white"
+              className="x-auto fixed top-0 right-0 z-40 flex h-screen w-full max-w-[308px] justify-center overflow-y-auto rounded-[24px] border-l border-[#FFFFFF40] bg-white"
               initial={{ x: "100%" }}
               animate={{ x: "0%" }}
               exit={{ x: "100%" }}
@@ -60,8 +60,8 @@ const BurgerMenu = () => {
                     />
                   </div>
                 </div>
-                <div>
-                  <div className="mt-4 flex w-[300px] justify-end pr-6">
+                <div className="flex w-full justify-end">
+                  <div className="mt-4 flex w-full max-w-[300px] items-end justify-end">
                     <LocaleSwitcherButtons />
                   </div>
                 </div>
@@ -80,7 +80,7 @@ const BurgerMenu = () => {
                 <CustomButton
                   text="Registration"
                   href="/"
-                  className="flex w-full items-center justify-end rounded-[8px] border border-[#F2430D] pt-3 text-center text-[15px] font-[600] text-[#F2430D] hover:bg-[#F2430D] hover:text-[#ffffff]"
+                  className="flex w-full items-center justify-end rounded-[8px] border border-[#F2430D] pt-3 text-center text-[15px] font-[600] text-[#F2430D] transition-colors duration-300 ease-in-out hover:bg-[#B74C2C] hover:text-[#ffffff]"
                 />
               </div>
             </motion.div>

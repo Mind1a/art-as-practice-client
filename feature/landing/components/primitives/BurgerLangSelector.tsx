@@ -14,10 +14,10 @@ const LocaleSwitcherButtons = () => {
   }
 
   return (
-    <div className="flex w-[134px] justify-end gap-2">
+    <div className="flex w-full max-w-[134px] justify-end gap-2">
       <button
         onClick={() => changeLocale("eng")}
-        className={`h-[43px] min-w-[63px] rounded-[8px] border px-3 py-1 font-medium transition-colors ${
+        className={`h-[43px] max-w-[63px] rounded-[8px] border px-3 py-1 font-medium transition-colors ${
           currentLocale === "eng"
             ? "border-[#F2430D] bg-white text-orange-500"
             : "border-[#00000] bg-white text-black hover:bg-gray-50"
@@ -27,7 +27,7 @@ const LocaleSwitcherButtons = () => {
       </button>
       <button
         onClick={() => changeLocale("ka")}
-        className={`h-[43px] min-w-[63px] rounded-[8px] border px-3 py-1 font-medium transition-colors ${
+        className={`h-[43px] max-w-[63px] rounded-[8px] border px-3 py-1 font-medium transition-colors ${
           currentLocale === "ka"
             ? "border-orange-500 bg-white text-orange-500"
             : "border-[#000000] bg-white text-black hover:bg-gray-50"
