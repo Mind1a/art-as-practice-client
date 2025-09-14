@@ -13,13 +13,13 @@ const LocaleSwitcherSelect = ({ defaultValue, label }: DropDpwnMenuProps) => {
 
   const [open, setOpen] = useState(false)
   const [selected, setSelected] = useState(defaultValue || currentLocale)
-  const [firstLoad, setFirstLoad] = useState(true) // 👉 პირველად true
+  const [firstLoad, setFirstLoad] = useState(true)
   const dropdownRef = useRef<HTMLDivElement>(null)
 
   const changeLocale = (locale: Locale) => {
     setSelected(locale)
     setOpen(false)
-    setFirstLoad(false) // 👉 ენის არჩევის შემდეგ ღილაკი იღებს ფერს
+    setFirstLoad(false)
     router.replace(
       // @ts-expect-error
       { pathname, params },
