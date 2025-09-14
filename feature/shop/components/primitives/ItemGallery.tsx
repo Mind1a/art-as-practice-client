@@ -13,7 +13,7 @@ const ItemGallery = () => {
   const [mainImage, setMainImage] = useState(images[0]);
 
   return (
-    <div className="flex md:flex-row flex-col lg:items-center gap-4 md:gap-6 mx-auto lg:mb-8 w-full max-w-[720px] lg:max-w-full md:max-h-[670px] lg:max-h-full">
+    <div className="flex md:flex-row flex-col lg:items-center gap-4 md:gap-6 mx-auto lg:mb-8 pt-30 w-full max-w-[720px] lg:max-w-full md:max-h-[670px] lg:max-h-full">
       {/* Main image */}
       <div className="flex-1 px-7 md:px-0 w-full lg:max-w-[680px] md:max-h-full">
         <Image

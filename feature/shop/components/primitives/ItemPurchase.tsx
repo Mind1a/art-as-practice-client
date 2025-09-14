@@ -12,19 +12,25 @@ const ItemPurchase = () => {
     try {
       await navigator.clipboard.writeText(id);
       setCopied(true);
-      setTimeout(() => setCopied(false), 2000); // reset after 2s
+      setTimeout(() => setCopied(false), 2000);
     } catch (err) {
       console.error("Failed to copy!", err);
     }
   };
 
   return (
-    <div className="hidden lg:flex justify-center items-center gap-6 pb-28">
+    <div className="flex lg:flex lg:flex-row flex-col lg:justify-center lg:items-center gap-[10px] lg:gap-6 pb-28">
       <button
         onClick={handleCopy}
-        className="flex items-center gap-[10px] px-4 py-[9px] border border-[#F2430D] border-dashed rounded-lg cursor-pointer"
+        className="flex justify-center items-center gap-[10px] px-4 py-[9px] border border-[#F2430D] border-dashed rounded-lg cursor-pointer"
       >
-        <Image width={24} height={24} src={copyImage} alt="copy button" />
+        <Image
+          width={24}
+          height={24}
+          src={copyImage}
+          alt="copy button"
+          className="hidden lg:block"
+        />
         <span className="font-semibold text-[#F2430D] text-xl">{id}</span>
       </button>
       <button className="bg-[#F2430D] hover:bg-[#B74C2C] px-4 py-3 rounded-lg font-semibold text-[15px] text-white transition-all cursor-pointer">
