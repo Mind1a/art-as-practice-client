@@ -1,4 +1,5 @@
 import Landing from "feature/landing/components/composities/Landing"
+import Testimonials from "feature/landing/components/composities/Testemonials"
 
 // import { useTranslations } from "next-intl"
 
@@ -9,7 +10,8 @@ const Home = () => {
       {/* <LocaleSwitcher />
       <h1 className="text-[color:var(--h2-color)]">{t("title")}</h1>
       <p className="text-[color:var(--username-and-join)]">{t("about")}</p> */}
-      <Landing />
+      {/* <Landing /> */}
+      <Testimonials />
     </div>
   )
 }

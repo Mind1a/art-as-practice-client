@@ -13,6 +13,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "embla-carousel-react": "^8.6.0",
     "framer-motion": "^12.23.6",
     "motion": "^12.23.6",
     "next": "15.3.5",
