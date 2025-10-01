@@ -1,12 +1,19 @@
-import { StaticImageData } from "next/image";
-
-export type CardTypes = {
+type ArtworkImages = {
   id: number;
-  image: StaticImageData;
-  title: string;
-  name: string;
+  image_name: string;
+};
+
+export type ArtworkTypes = {
   author: string;
-  price: string;
+  description: string;
+  id: number;
+  images: ArtworkImages[];
+  link: string;
+  name: string;
+  price: number;
+  series: string;
+  size: string;
+  style: string;
 };
 
 export type PaginationProps = {

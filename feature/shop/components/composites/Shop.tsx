@@ -6,44 +6,15 @@ import Pagination from "@/feature/shop/components/primitives/Pagination";
 import { useQuery } from "@tanstack/react-query";
 import Link from "next/link";
 import { useState } from "react";
+import { getAllArtworks } from "@/api/artworksApi";
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-
-type ArtworkImages = {
-  id: number;
-  image_name: string;
-};
-
-export type ArtworkTypes = {
-  author: string;
-  description: string;
-  id: number;
-  images: ArtworkImages[];
-  link: string;
-  name: string;
-  price: number;
-  series: string;
-  size: string;
-  style: string;
-};
+export const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
 const Shop = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const cardsPerPage = 2;
 
   // Add tanstack quary for data fetching //
-
-  const getAllArtworks = async ({
-    page,
-    limit,
-  }: {
-    page: number;
-    limit: number;
-  }): Promise<ArtworkTypes[]> => {
-    const res = await fetch(`${baseUrl}/Artworks/?page=${page}&limit=${limit}`);
-    if (!res.ok) throw new Error("Failed to fetch artworks");
-    return res.json();
-  };
 
   const { data, isError, isLoading } = useQuery({
     queryKey: ["artworks", currentPage, cardsPerPage],
