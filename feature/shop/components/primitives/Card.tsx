@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ArtworkTypes } from "../composites/Shop";
+import image1 from "@/feature/shop/assets/gallery/image-1.png";
 
 const Card = ({ cardData }: { cardData: ArtworkTypes }) => {
   return (
@@ -8,7 +9,7 @@ const Card = ({ cardData }: { cardData: ArtworkTypes }) => {
         width={100}
         height={100}
         className="w-full"
-        src={`/${cardData.images[0].image_name}`}
+        src={image1}
         alt="card cover"
       />
       <div className="lg:relative flex lg:flex-col justify-between">

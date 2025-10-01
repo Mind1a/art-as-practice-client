@@ -3,12 +3,11 @@
 import Card from "@/feature/shop/components/primitives/Card";
 import Heading from "@/feature/shop/components/primitives/Heading";
 import Pagination from "@/feature/shop/components/primitives/Pagination";
-// import { cardsData } from "@/feature/shop/lib/shopData";
 import { useQuery } from "@tanstack/react-query";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-const BASE_URL = "https://artaspractice.onrender.com/";
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
 type ArtworkImages = {
   id: number;
@@ -30,7 +29,7 @@ export type ArtworkTypes = {
 
 const Shop = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [cardsPerPage, setCardsPerPage] = useState(2);
+  const cardsPerPage = 2;
 
   // Add tanstack quary for data fetching //
 
@@ -41,9 +40,7 @@ const Shop = () => {
     page: number;
     limit: number;
   }): Promise<ArtworkTypes[]> => {
-    const res = await fetch(
-      `${BASE_URL}/Artworks/?page=${page}&limit=${limit}`
-    );
+    const res = await fetch(`${baseUrl}/Artworks/?page=${page}&limit=${limit}`);
     if (!res.ok) throw new Error("Failed to fetch artworks");
     return res.json();
   };
@@ -54,23 +51,6 @@ const Shop = () => {
   });
 
   console.log(data);
-
-  // // Adjust cards per page based on screen width
-  // useEffect(() => {
-  //   const updateCardsPerPage = () => {
-  //     if (window.innerWidth >= 768) {
-  //       setCardsPerPage(6); // Tablet & up
-  //     } else {
-  //       setCardsPerPage(4); // Mobile
-  //     }
-  //   };
-
-  //   updateCardsPerPage();
-  //   window.addEventListener("resize", updateCardsPerPage);
-  //   return () => window.removeEventListener("resize", updateCardsPerPage);
-  // }, []);
-
-  // const totalPages = Math.ceil(cardsData.length / cardsPerPage);
 
   // // Slice cards
   // const startIndex = (currentPage - 1) * cardsPerPage;
