@@ -52,11 +52,6 @@ const Shop = () => {
 
   console.log(data);
 
-  // // Slice cards
-  // const startIndex = (currentPage - 1) * cardsPerPage;
-  // const endIndex = startIndex + cardsPerPage;
-  // const currentCards = cardsData.slice(startIndex, endIndex);
-
   if (isError) return <div>Error fetching data...</div>;
   if (isLoading) return <div>Loading...</div>;
 
@@ -70,11 +65,6 @@ const Shop = () => {
       {/* body */}
       <div className="flex flex-col items-center pt-14 lg:pt-[135px] pb-[102px]">
         <div className="gap-16 md:gap-x-6 lg:gap-x-[211px] lg:gap-y-[112px] grid grid-cols-1 md:grid-cols-2 mb-16 lg:px-[97.5px] w-full">
-          {/* {currentCards.map((cardData) => (
-            <Link href={`/shop/${cardData.id}`} key={cardData.id}>
-              <Card cardData={cardData} />
-            </Link>
-          ))} */}
           {data?.map((cardData) => (
             <Link href={`/shop/${cardData.id}`} key={cardData.id}>
               <Card cardData={cardData} />
