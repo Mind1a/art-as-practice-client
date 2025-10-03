@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { ArtworkTypes } from "../composites/Shop";
 import image1 from "@/feature/shop/assets/gallery/image-1.png";
+import { ArtworkTypes } from "../../lib/shopTypes";
 
 const Card = ({ cardData }: { cardData: ArtworkTypes }) => {
   return (
@@ -12,6 +12,13 @@ const Card = ({ cardData }: { cardData: ArtworkTypes }) => {
         src={image1}
         alt="card cover"
       />
+      {/* <Image
+        width={100}
+        height={100}
+        className="w-full"
+        src={`https://artaspractice.onrender.com/static/uploads/${cardData.images[0].image_name}`}
+        alt="card cover"
+      /> */}
       <div className="lg:relative flex lg:flex-col justify-between">
         <div className="flex flex-col gap-[11px]">
           <h2 className="font-semibold text-[#0C0C0C] text-xl">
@@ -22,7 +29,7 @@ const Card = ({ cardData }: { cardData: ArtworkTypes }) => {
             Author: {cardData.author}
           </p>
         </div>
-        <span className="lg:bottom-[-24px] lg:left-6 lg:absolute font-semibold text-[#F2430D] text-xl lg:rotate-[270deg] lg:translate-x-[-55px] lg:translate-y-[-47px]">
+        <span className="lg:bottom-0 lg:left-6 lg:absolute font-semibold text-[#F2430D] text-xl lg:rotate-[-90deg] origin-bottom-left">
           {cardData.price}GEL
         </span>
       </div>
