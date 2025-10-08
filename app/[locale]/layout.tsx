@@ -9,6 +9,8 @@ import { notFound } from "next/navigation"
 
 import "./globals.css"
 import { routing } from "feature/i18n/routing"
+import Footer from "feature/landing/components/composities/Footer"
+import Header from "feature/landing/components/composities/Header"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,7 +40,9 @@ export default async function RootLayout({
     <html lang={locale} className="scroll-smooth" suppressHydrationWarning>
       <body className={`${geistSans.variable} antialiased`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
+          {/* <Header /> */}
           {children}
+          {/* <Footer /> */}
         </NextIntlClientProvider>
       </body>
     </html>
