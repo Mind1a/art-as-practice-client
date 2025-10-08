@@ -9,16 +9,13 @@ const Card = ({ cardData }: { cardData: ArtworkTypes }) => {
         width={100}
         height={100}
         className="w-full"
-        src={image1}
+        src={
+          cardData.images[0].image_name
+            ? `https://artaspractice.onrender.com${cardData.images[0].image_name}`
+            : image1
+        }
         alt="card cover"
       />
-      {/* <Image
-        width={100}
-        height={100}
-        className="w-full"
-        src={`https://artaspractice.onrender.com/static/uploads/${cardData.images[0].image_name}`}
-        alt="card cover"
-      /> */}
       <div className="lg:relative flex lg:flex-col justify-between">
         <div className="flex flex-col gap-[11px]">
           <h2 className="font-semibold text-[#0C0C0C] text-xl">

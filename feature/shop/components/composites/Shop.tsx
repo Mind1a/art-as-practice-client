@@ -21,11 +21,6 @@ const Shop = () => {
     queryFn: () => getAllArtworks({ page: currentPage, limit: cardsPerPage }),
   });
 
-  console.log(data);
-
-  if (isError) return <div>Error fetching data...</div>;
-  if (isLoading) return <div>Loading...</div>;
-
   const totalPages = data ? Math.ceil(data.length / cardsPerPage) : 0;
 
   return (
@@ -36,11 +31,17 @@ const Shop = () => {
       {/* body */}
       <div className="flex flex-col items-center pt-14 lg:pt-[135px] pb-[102px]">
         <div className="gap-16 md:gap-x-6 lg:gap-x-[211px] lg:gap-y-[112px] grid grid-cols-1 md:grid-cols-2 mb-16 lg:px-[97.5px] w-full">
-          {data?.map((cardData) => (
-            <Link href={`/shop/${cardData.id}`} key={cardData.id}>
-              <Card cardData={cardData} />
-            </Link>
-          ))}
+          {isLoading ? (
+            <div>Loading...</div>
+          ) : isError ? (
+            <div>Error fetching data...</div>
+          ) : (
+            data?.map((cardData) => (
+              <Link href={`/shop/${cardData.id}`} key={cardData.id}>
+                <Card cardData={cardData} />
+              </Link>
+            ))
+          )}
         </div>
 
         <Pagination

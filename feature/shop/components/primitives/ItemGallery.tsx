@@ -2,15 +2,11 @@
 
 import Image from "next/image";
 
-import image1 from "@/feature/shop/assets/gallery/image-1.png";
-import image2 from "@/feature/shop/assets/gallery/image-2.png";
-import image3 from "@/feature/shop/assets/gallery/image-3.png";
-import image4 from "@/feature/shop/assets/gallery/image-4.png";
 import { useState } from "react";
+import { ArtworkImages } from "../../lib/shopTypes";
 
-const ItemGallery = () => {
-  const images = [image1, image2, image3, image4];
-  const [mainImage, setMainImage] = useState(images[0]);
+const ItemGallery = ({ images }: { images: ArtworkImages[] }) => {
+  const [mainImage, setMainImage] = useState(images[0].image_name);
 
   return (
     <div className="flex md:flex-row flex-col lg:items-center gap-4 md:gap-6 mx-auto lg:mb-8 pt-30 w-full max-w-[720px] lg:max-w-full md:max-h-[670px] lg:max-h-full">
@@ -18,7 +14,7 @@ const ItemGallery = () => {
       <div className="flex-1 px-7 md:px-0 w-full lg:max-w-[680px] md:max-h-full">
         <Image
           className="w-full h-full object-cover"
-          src={mainImage}
+          src={`https://artaspractice.onrender.com${mainImage}`}
           alt="Main image"
           width={800}
           height={500}
@@ -28,15 +24,15 @@ const ItemGallery = () => {
 
       {/* Gallery thumbnails */}
       <div className="flex lg:flex-row md:flex-col lg:flex-1 gap-3 md:gap-2 md:min-w-[220px] md:max-h-full lg:overflow-visible md:overflow-y-auto">
-        {images.slice(1).map((img, i) => (
+        {images.map((img) => (
           <Image
-            key={i}
+            key={img.id}
             className="w-1/3 md:w-full lg:h-fit object-cover cursor-pointer"
-            src={img}
-            alt={`Gallery image ${i + 1}`}
+            src={`https://artaspractice.onrender.com${img.image_name}`}
+            alt={`Gallery image`}
             width={250}
             height={200}
-            onClick={() => setMainImage(img)}
+            onClick={() => setMainImage(img.image_name)}
           />
         ))}
       </div>

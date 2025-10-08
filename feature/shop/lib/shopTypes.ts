@@ -1,4 +1,4 @@
-type ArtworkImages = {
+export type ArtworkImages = {
   id: number;
   image_name: string;
 };
