@@ -2,6 +2,9 @@
 
 import Image from "next/image";
 
+// placeholder image
+import image1 from "@/feature/shop/assets/gallery/image-1.png";
+
 import { useState } from "react";
 import { ArtworkImages } from "../../lib/shopTypes";
 
@@ -14,7 +17,7 @@ const ItemGallery = ({ images }: { images: ArtworkImages[] }) => {
       <div className="flex-1 px-7 md:px-0 w-full lg:max-w-[680px] md:max-h-full">
         <Image
           className="w-full h-full object-cover"
-          src={`https://artaspractice.onrender.com${mainImage}`}
+          src={image1}
           alt="Main image"
           width={800}
           height={500}
@@ -28,7 +31,8 @@ const ItemGallery = ({ images }: { images: ArtworkImages[] }) => {
           <Image
             key={img.id}
             className="w-1/3 md:w-full lg:h-fit object-cover cursor-pointer"
-            src={`https://artaspractice.onrender.com${img.image_name}`}
+            // should change url after back provides image
+            src={image1}
             alt={`Gallery image`}
             width={250}
             height={200}
