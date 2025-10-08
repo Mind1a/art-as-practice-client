@@ -5,7 +5,7 @@ import Footer from "./Footer"
 const Landing = () => {
   return (
     <div>
-      {/* <Header /> */}
+      <Header />
       <Footer />
     </div>
   )
