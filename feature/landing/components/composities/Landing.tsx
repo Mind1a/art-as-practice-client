@@ -1,11 +1,12 @@
 import React from "react"
 import Header from "./Header"
-import Footer from "./Footer"
+import HeroSection from "./HeroSection"
 
 const Landing = () => {
   return (
     <div>
       <Header />
+      <HeroSection />
     </div>
   )
 }
