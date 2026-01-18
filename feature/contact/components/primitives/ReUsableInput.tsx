@@ -1,3 +1,4 @@
+import { ReUsableInputProps } from "feature/landing/types"
 import React from "react"
 
 const ReUsableInput: React.FC<ReUsableInputProps> = ({
@@ -8,7 +9,7 @@ const ReUsableInput: React.FC<ReUsableInputProps> = ({
   errors,
   type = "text",
 }) => (
-  <div className="flex min-h-[130px] w-full max-w-[720px] flex-col gap-[10px] rounded-[12px] bg-white px-[24px] pt-[16px] pb-[24px] md:py-[16px] lg:max-w-[1114px]">
+  <div className="flex min-h-[130px] w-full max-w-[720px] flex-col gap-[10px] rounded-[12px] bg-white px-[24px] pt-[16px] pb-[24px] md:py-[16px] lg:max-w-[1144px]">
     <label htmlFor={id} className="cursor-pointer font-medium text-black">
       {label}
     </label>

@@ -64,7 +64,7 @@ const Contact = () => {
           register={register}
           errors={errors}
         />
-        <div className="flex min-h-[232px] w-full max-w-[720px] flex-col gap-[24px] rounded-[12px] bg-white px-[24px] pt-[16px] pb-[24px] md:py-[16px] lg:max-w-[1114px]">
+        <div className="flex min-h-[232px] w-full max-w-[720px] flex-col gap-[24px] rounded-[12px] bg-white px-[24px] pt-[16px] pb-[24px] md:py-[16px] lg:max-w-[1144px]">
           <label className="cursor-pointer font-medium text-black">
             Pick the language (you can choose more than one)*
           </label>
@@ -95,7 +95,7 @@ const Contact = () => {
           )}
         </div>
 
-        <div className="flex min-h-[312px] w-full max-w-[720px] flex-col gap-[24px] rounded-[12px] bg-white px-[24px] pt-[16px] pb-[24px] md:py-[16px] lg:max-w-[1114px]">
+        <div className="flex min-h-[312px] w-full max-w-[720px] flex-col gap-[24px] rounded-[12px] bg-white px-[24px] pt-[16px] pb-[24px] md:py-[16px] lg:max-w-[1144px]">
           <label className="cursor-pointer font-medium text-black">Age</label>
           <div className="space-y-[16px]">
             {ageRange.map((lang) => (
