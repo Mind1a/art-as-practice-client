@@ -1,22 +1,22 @@
-"use client";
+"use client"
 
-import Image from "next/image";
+import Image from "next/image"
 
 // placeholder image
-import image1 from "@/feature/shop/assets/gallery/image-1.png";
+import image1 from "feature/shop/assets/gallery/image-1.png"
 
-import { useState } from "react";
-import { ArtworkImages } from "../../lib/shopTypes";
+import { useState } from "react"
+import { ArtworkImages } from "../../lib/shopTypes"
 
 const ItemGallery = ({ images }: { images: ArtworkImages[] }) => {
-  const [mainImage, setMainImage] = useState(images[0].image_name);
+  const [mainImage, setMainImage] = useState(images[0].image_name)
 
   return (
-    <div className="flex md:flex-row flex-col lg:items-center gap-4 md:gap-6 mx-auto lg:mb-8 pt-30 w-full max-w-[720px] lg:max-w-full md:max-h-[670px] lg:max-h-full">
+    <div className="mx-auto flex w-full max-w-[720px] flex-col gap-4 pt-30 md:max-h-[670px] md:flex-row md:gap-6 lg:mb-8 lg:max-h-full lg:max-w-full lg:items-center">
       {/* Main image */}
-      <div className="flex-1 px-7 md:px-0 w-full lg:max-w-[680px] md:max-h-full">
+      <div className="w-full flex-1 px-7 md:max-h-full md:px-0 lg:max-w-[680px]">
         <Image
-          className="w-full h-full object-cover"
+          className="h-full w-full object-cover"
           src={image1}
           alt="Main image"
           width={800}
@@ -26,11 +26,11 @@ const ItemGallery = ({ images }: { images: ArtworkImages[] }) => {
       </div>
 
       {/* Gallery thumbnails */}
-      <div className="flex lg:flex-row md:flex-col lg:flex-1 gap-3 md:gap-2 md:min-w-[220px] md:max-h-full lg:overflow-visible md:overflow-y-auto">
+      <div className="flex gap-3 md:max-h-full md:min-w-[220px] md:flex-col md:gap-2 md:overflow-y-auto lg:flex-1 lg:flex-row lg:overflow-visible">
         {images.map((img) => (
           <Image
             key={img.id}
-            className="w-1/3 md:w-full lg:h-fit object-cover cursor-pointer"
+            className="w-1/3 cursor-pointer object-cover md:w-full lg:h-fit"
             // should change url after back provides image
             src={image1}
             alt={`Gallery image`}
@@ -41,7 +41,7 @@ const ItemGallery = ({ images }: { images: ArtworkImages[] }) => {
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ItemGallery;
+export default ItemGallery

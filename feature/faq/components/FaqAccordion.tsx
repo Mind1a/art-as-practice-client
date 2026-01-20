@@ -1,31 +1,31 @@
-"use client";
-import { useState } from "react";
-import { faqData } from "@feature/faq/data/data";
-import Image from "next/image";
-import chevron from "@feature/faq/assets/chevron.png";
+"use client"
+import { useState } from "react"
+import { faqData } from "feature/faq/data/data"
+import Image from "next/image"
+import chevron from "feature/faq/assets/chevron.png"
 
 function FaqAccordion() {
-  const [activeIndexes, setActiveIndexes] = useState<number[]>([]);
+  const [activeIndexes, setActiveIndexes] = useState<number[]>([])
 
   const toggleItem = (index: number) => {
     if (activeIndexes.includes(index)) {
-      setActiveIndexes(activeIndexes.filter((i) => i !== index));
+      setActiveIndexes(activeIndexes.filter((i) => i !== index))
     } else {
-      setActiveIndexes([...activeIndexes, index]);
+      setActiveIndexes([...activeIndexes, index])
     }
-  };
+  }
 
   return (
-    <div className="space-y-7 lg:max-w-[1144px] mx-auto">
+    <div className="mx-auto space-y-7 lg:max-w-[1144px]">
       {faqData.map((item, index) => (
         <div
           key={index}
-          className="flex flex-col border border-[#f2430d] bg-white rounded-[13px] shadow-sm overflow-hidden"
+          className="flex flex-col overflow-hidden rounded-[13px] border border-[#f2430d] bg-white shadow-sm"
         >
           <button
             onClick={() => toggleItem(index)}
             aria-expanded={activeIndexes.includes(index)}
-            className="flex justify-between items-center p-6 w-full text-left cursor-pointer"
+            className="flex w-full cursor-pointer items-center justify-between p-6 text-left"
           >
             <span>{item.question}</span>
 
@@ -39,12 +39,12 @@ function FaqAccordion() {
           </button>
 
           {activeIndexes.includes(index) && (
-            <div className="p-6 border-t border-[#f2430d]">{item.answer}</div>
+            <div className="border-t border-[#f2430d] p-6">{item.answer}</div>
           )}
         </div>
       ))}
     </div>
-  );
+  )
 }
 
-export default FaqAccordion;
+export default FaqAccordion

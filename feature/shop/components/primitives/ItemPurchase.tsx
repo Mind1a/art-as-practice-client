@@ -1,28 +1,28 @@
-"use client";
+"use client"
 
-import Image from "next/image";
-import copyImage from "@/feature/shop/assets/copy.png";
-import { useState } from "react";
+import Image from "next/image"
+import copyImage from "feature/shop/assets/copy.png"
+import { useState } from "react"
 
 const ItemPurchase = () => {
-  const [copied, setCopied] = useState(false);
-  const id = "ID879";
+  const [copied, setCopied] = useState(false)
+  const id = "ID879"
 
   const handleCopy = async () => {
     try {
-      await navigator.clipboard.writeText(id);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
+      await navigator.clipboard.writeText(id)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
     } catch (err) {
-      console.error("Failed to copy!", err);
+      console.error("Failed to copy!", err)
     }
-  };
+  }
 
   return (
-    <div className="flex lg:flex lg:flex-row flex-col lg:justify-center lg:items-center gap-[10px] lg:gap-6 pb-28">
+    <div className="flex flex-col gap-[10px] pb-28 lg:flex lg:flex-row lg:items-center lg:justify-center lg:gap-6">
       <button
         onClick={handleCopy}
-        className="flex justify-center items-center gap-[10px] px-4 py-[9px] border border-[#F2430D] border-dashed rounded-lg cursor-pointer"
+        className="flex cursor-pointer items-center justify-center gap-[10px] rounded-lg border border-dashed border-[#F2430D] px-4 py-[9px]"
       >
         <Image
           width={24}
@@ -31,16 +31,16 @@ const ItemPurchase = () => {
           alt="copy button"
           className="hidden lg:block"
         />
-        <span className="font-semibold text-[#F2430D] text-xl">{id}</span>
+        <span className="text-xl font-semibold text-[#F2430D]">{id}</span>
       </button>
-      <button className="bg-[#F2430D] hover:bg-[#B74C2C] px-4 py-3 rounded-lg font-semibold text-[15px] text-white transition-all cursor-pointer">
+      <button className="cursor-pointer rounded-lg bg-[#F2430D] px-4 py-3 text-[15px] font-semibold text-white transition-all hover:bg-[#B74C2C]">
         Buy It Now
       </button>
 
       {/* Feedback */}
       {copied && <span className="font-medium text-green-600">Copied!</span>}
     </div>
-  );
-};
+  )
+}
 
-export default ItemPurchase;
+export default ItemPurchase
