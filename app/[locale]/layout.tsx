@@ -40,9 +40,9 @@ export default async function RootLayout({
     <html lang={locale} className="scroll-smooth" suppressHydrationWarning>
       <body className={`${geistSans.variable} antialiased`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          {/* <Header /> */}
+          <Header />
           {children}
-          {/* <Footer /> */}
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>
