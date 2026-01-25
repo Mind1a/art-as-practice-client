@@ -1,15 +1,16 @@
+import { TextSegment } from "feature/about/types/about"
 import React from "react"
 
-interface TextSegment {
-  text: string
-  isBold?: boolean
+type Props = {
+  paragraphs: TextSegment[][]
+  className: string
 }
 
-const Description = ({ paragraphs }: { paragraphs: TextSegment[][] }) => {
+const Description = ({ paragraphs, className }: Props) => {
   return (
     <>
       {paragraphs.map((paragraph, pIdx) => (
-        <p key={pIdx} className="leading-[1.5] tracking-[0.1em]">
+        <p key={pIdx} className={className}>
           {paragraph.map((segment, sIdx) => (
             <span
               key={sIdx}
