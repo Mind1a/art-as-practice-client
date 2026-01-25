@@ -1,5 +1,3 @@
-import { StaticImageData } from "next/image"
-
 export type TextSegment = {
   text: string
   isBold?: boolean
@@ -7,7 +5,8 @@ export type TextSegment = {
 
 export interface FeatureItem {
   id: string | number
-  icon: StaticImageData | string
+  iconColour: string
+  icon: React.FC<React.SVGProps<SVGSVGElement>>
   content: TextSegment[]
 }
 

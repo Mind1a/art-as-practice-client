@@ -1,10 +1,20 @@
-import { vector1 } from "feature/about/assets"
+import {
+  Infinity,
+  Art,
+  Book,
+  Brush,
+  Check,
+  Puzzle,
+  Smile,
+  User,
+} from "feature/about/assets"
 import { FeatureItem, IntroSectionData, TextSegment } from "../types/about"
 
 export const EXPERIENCE_LIST: FeatureItem[] = [
   {
     id: "exp-1",
-    icon: vector1,
+    icon: User,
+    iconColour: "#373737",
     content: [
       { text: "5 live, interactive sessions ", isBold: true },
       { text: "with Wato Tsereteli", isBold: false },
@@ -12,7 +22,8 @@ export const EXPERIENCE_LIST: FeatureItem[] = [
   },
   {
     id: "exp-2",
-    icon: vector1,
+    icon: Art,
+    iconColour: "#373737",
     content: [
       { text: "Overcome creative blocks ", isBold: true },
       { text: "and unlock your artistic expression", isBold: false },
@@ -20,7 +31,8 @@ export const EXPERIENCE_LIST: FeatureItem[] = [
   },
   {
     id: "exp-3",
-    icon: vector1,
+    icon: Brush,
+    iconColour: "#373737",
     content: [
       { text: "Develop a unique visual style ", isBold: true },
       { text: "and personal symbol vocabulary", isBold: false },
@@ -28,7 +40,8 @@ export const EXPERIENCE_LIST: FeatureItem[] = [
   },
   {
     id: "exp-4",
-    icon: vector1,
+    icon: Puzzle,
+    iconColour: "#373737",
     content: [
       { text: "Turn ideas into tangible projects ", isBold: true },
       { text: "through a structured process", isBold: false },
@@ -36,7 +49,8 @@ export const EXPERIENCE_LIST: FeatureItem[] = [
   },
   {
     id: "exp-5",
-    icon: vector1,
+    icon: Book,
+    iconColour: "#373737",
     content: [
       { text: "Practical creativity training ", isBold: true },
       { text: "for all skill levels", isBold: false },
@@ -44,7 +58,8 @@ export const EXPERIENCE_LIST: FeatureItem[] = [
   },
   {
     id: "exp-6",
-    icon: vector1,
+    icon: Smile,
+    iconColour: "#373737",
     content: [
       { text: "Expert insights and feedback ", isBold: true },
       { text: "to elevate your artistic practice", isBold: false },
@@ -55,7 +70,8 @@ export const EXPERIENCE_LIST: FeatureItem[] = [
 export const WHY_JOIN_LIST: FeatureItem[] = [
   {
     id: "exp-1",
-    icon: vector1,
+    icon: Check,
+    iconColour: "#34C759",
     content: [
       {
         text: "Experience the transformative power of creativity",
@@ -65,7 +81,8 @@ export const WHY_JOIN_LIST: FeatureItem[] = [
   },
   {
     id: "exp-2",
-    icon: vector1,
+    icon: Check,
+    iconColour: "#34C759",
     content: [
       {
         text: "Develop a personal visual language for deeper self-expression",
@@ -75,7 +92,8 @@ export const WHY_JOIN_LIST: FeatureItem[] = [
   },
   {
     id: "exp-3",
-    icon: vector1,
+    icon: Check,
+    iconColour: "#34C759",
     content: [
       {
         text: "Learn to create a productive, growth-focused creative space",
@@ -85,7 +103,8 @@ export const WHY_JOIN_LIST: FeatureItem[] = [
   },
   {
     id: "exp-4",
-    icon: vector1,
+    icon: Check,
+    iconColour: "#34C759",
     content: [
       {
         text: "Bring any project to life, from concept to final realization",
@@ -95,7 +114,8 @@ export const WHY_JOIN_LIST: FeatureItem[] = [
   },
   {
     id: "exp-5",
-    icon: vector1,
+    icon: Check,
+    iconColour: "#34C759",
     content: [
       {
         text: "Discover new perspectives with innovative artistic tools & techniques",
@@ -123,7 +143,8 @@ export const WHY_JOIN = {
   list: WHY_JOIN_LIST,
   aside: {
     label: "Join us and redefine what it means to be a creator in your world.",
-    icon: vector1,
+    icon: Art,
+    iconColour: "#373737",
   },
 }
 
@@ -199,6 +220,7 @@ export const EXPERIENCE_DATA = {
   list: EXPERIENCE_LIST,
   aside: {
     label: "",
-    icon: "",
+    icon: Infinity,
+    iconColour: "#373737",
   },
 }
