@@ -1,48 +1,59 @@
 "use client"
 import { useState } from "react"
 import { faqData } from "feature/faq/data/data"
-import Image from "next/image"
-import chevron from "feature/faq/assets/chevron.png"
+import { ArrowDown } from "../assets"
 
 function FaqAccordion() {
   const [activeIndexes, setActiveIndexes] = useState<number[]>([])
 
   const toggleItem = (index: number) => {
-    if (activeIndexes.includes(index)) {
-      setActiveIndexes(activeIndexes.filter((i) => i !== index))
-    } else {
-      setActiveIndexes([...activeIndexes, index])
-    }
+    setActiveIndexes((prev) =>
+      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
+    )
   }
 
   return (
     <div className="mx-auto space-y-7 lg:max-w-[1144px]">
-      {faqData.map((item, index) => (
-        <div
-          key={index}
-          className="flex flex-col overflow-hidden rounded-[13px] border border-[#f2430d] bg-white shadow-sm"
-        >
-          <button
-            onClick={() => toggleItem(index)}
-            aria-expanded={activeIndexes.includes(index)}
-            className="flex w-full cursor-pointer items-center justify-between p-6 text-left"
+      {faqData.map((item, index) => {
+        const isOpen = activeIndexes.includes(index)
+
+        return (
+          <div
+            key={index}
+            className={`flex flex-col overflow-hidden rounded-[13px] border bg-white shadow-sm ${isOpen ? "border-[#f2430d]" : "border-[#828282]"}`}
           >
-            <span>{item.question}</span>
-
-            <Image
-              src={chevron}
-              alt=""
-              className={`transform transition-transform duration-300 ${
-                activeIndexes.includes(index) ? "rotate-0" : "rotate-180"
+            <button
+              onClick={() => toggleItem(index)}
+              aria-expanded={isOpen}
+              className="flex w-full cursor-pointer items-center justify-between p-6 text-left"
+            >
+              <span className="font-bai-jamjuree leading-6 font-medium">
+                {item.question}
+              </span>
+              <ArrowDown
+                width={24}
+                heigth={24}
+                className={`duration-300 ${isOpen ? "rotate-180" : "rotate-0"}`}
+              />
+            </button>
+            <div
+              className={`grid transition-[grid-template-rows,opacity] duration-300 ease-in-out ${
+                isOpen
+                  ? "grid-rows-[1fr] opacity-100"
+                  : "grid-rows-[0fr] opacity-0"
               }`}
-            />
-          </button>
-
-          {activeIndexes.includes(index) && (
-            <div className="border-t border-[#f2430d] p-6">{item.answer}</div>
-          )}
-        </div>
-      ))}
+            >
+              <div className="overflow-hidden">
+                <div className="border-t border-[#f2430d] p-6">
+                  <p className="font-inter leading-[1.5] tracking-[10%]">
+                    {item.answer}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        )
+      })}
     </div>
   )
 }
