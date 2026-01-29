@@ -3,7 +3,7 @@ import { mentorMain } from "feature/about/assets"
 import Image from "next/image"
 
 export const MentorProfile = () => (
-  <section className="mx-auto mt-10 flex w-full max-w-[1440px] flex-col items-center px-6 pt-10 lg:mt-[124px] lg:pt-13">
+  <section className="mx-auto mt-10 flex flex-col items-center px-6 pt-10">
     <div className="flex w-full max-w-[1010px] flex-col items-center justify-between lg:flex-row">
       <div className="max-w-[651px] px-[60px]">
         <h1 className="font-bai-jamjuree text-center text-[48px] font-semibold text-[#F2430D] lg:text-start lg:text-[100px]">

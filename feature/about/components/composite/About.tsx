@@ -59,14 +59,15 @@ const About = () => {
         </aside>
       </section>
 
-      <section>
+      <section className="font-montserrat mx-auto mt-16 flex items-center justify-center px-6">
         <FeatureList
           lastChild={false}
           content={EXPERIENCE_DATA.list}
           title={EXPERIENCE_DATA.title}
         />
       </section>
-      <section>
+
+      <section className="font-montserrat mx-auto mt-16 flex items-center justify-center px-6">
         <FeatureList
           lastChild={true}
           content={WHY_JOIN.list}
@@ -74,9 +75,7 @@ const About = () => {
         />
       </section>
 
-      <section>
-        <MentorProfile />
-      </section>
+      <MentorProfile />
 
       <section className="mt-[72px] mb-20 flex items-center justify-center px-6">
         <div className="font-inter w-full max-w-[912px] space-y-12">
@@ -86,6 +85,7 @@ const About = () => {
           />
         </div>
       </section>
+
       <section>
         <CustomSlider />
       </section>
