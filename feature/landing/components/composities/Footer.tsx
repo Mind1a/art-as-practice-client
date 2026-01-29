@@ -3,8 +3,8 @@ import Link from "next/link"
 
 const Footer = () => {
   return (
-    <footer className="flex w-full items-center justify-between border-t border-[#a8a8a8] bg-[#ffffff] px-[32px] py-6 lg:h-[240px] lg:px-10">
-      <div className="flex h-[47px] w-[58px] shrink-0 items-center lg:h-[72px] lg:w-[88px]">
+    <footer className="font-bai-jamjuree mx-auto flex w-full max-w-[1440px] items-center justify-between border-t border-[#a8a8a8] bg-[#ffffff] px-8 py-10">
+      <div className="flex w-[58px] shrink-0 items-center lg:h-[72px] lg:w-[88px]">
         <Image
           src="/images/svg/AAPLogo.svg"
           alt="logo"
@@ -13,7 +13,7 @@ const Footer = () => {
         />
       </div>
 
-      <div className="flex flex-row items-end gap-[32px] text-right text-sm text-gray-700 lg:flex-col lg:gap-[24px]">
+      <div className="flex flex-row items-end gap-[32px] text-right text-sm font-medium text-gray-700 lg:flex-col lg:gap-[24px]">
         <div className="flex flex-col flex-wrap gap-4 text-[10px] lg:flex-row lg:text-[16px]">
           <span>10 Dodo Abashidze St T'bilisi</span>
           <Link
