@@ -75,7 +75,7 @@ const Footer = () => {
               height={18}
               className="h-[16px] w-[16px] lg:h-[18px] lg:w-[18px]"
             />
-            <span className="lg:ml-0text-[10px] ml-[6px] lg:text-[16px]">
+            <span className="ml-[6px] text-[10px] lg:ml-0 lg:text-[16px]">
               Linkedin
             </span>
           </Link>
