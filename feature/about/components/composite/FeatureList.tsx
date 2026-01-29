@@ -5,14 +5,10 @@ import ListItem from "../primitive/ListItem"
 type Props = {
   title: string
   content: FeatureItem[]
-  aside: {
-    label: string
-    icon: React.FC<React.SVGProps<SVGSVGElement>>
-    iconColour: string
-  }
+  lastChild: boolean
 }
 
-const FeatureList = ({ title, content, aside }: Props) => {
+const FeatureList = ({ title, content, lastChild }: Props) => {
   return (
     <section className="font-montserrat mx-auto mt-14 flex w-full max-w-[1440px] items-center justify-center px-6">
       <div className="flex w-full max-w-[913px] flex-col">
@@ -20,31 +16,16 @@ const FeatureList = ({ title, content, aside }: Props) => {
           {title}
         </h4>
         <ul className="mt-4 space-y-2 md:space-y-5 lg:space-y-4">
-          {content.map((item) => (
+          {content.map((item, index) => (
             <ListItem
+              key={item.id}
               iconColour={item.iconColour}
               content={item.content}
               icon={item.icon}
-              key={item.id}
-              className="lg:text-basetext-[#373737] text-[14px] lg:leading-[1.5] lg:tracking-[0.1em]"
+              className={`${lastChild && index === content.length - 1 && "mt-6"} flex gap-4`}
             />
           ))}
         </ul>
-        {aside.label && (
-          <aside className="mt-6 flex w-full max-w-[913px] items-center lg:mt-[28px]">
-            <ListItem
-              iconColour={aside.iconColour}
-              icon={aside.icon}
-              className="text-[14px] font-bold text-[#373737] lg:text-base lg:leading-[1.5] lg:tracking-[0.1em]"
-              content={[
-                {
-                  text: aside.label,
-                  isBold: true,
-                },
-              ]}
-            />
-          </aside>
-        )}
       </div>
     </section>
   )

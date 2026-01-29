@@ -13,6 +13,7 @@ import { MentorProfile } from "./MentorProfile"
 import FeatureList from "./FeatureList"
 import Description from "../primitive/Description"
 import ListItem from "../primitive/ListItem"
+import CustomSlider from "./CustomSlider"
 
 const About = () => {
   return (
@@ -60,16 +61,16 @@ const About = () => {
 
       <section>
         <FeatureList
+          lastChild={false}
           content={EXPERIENCE_DATA.list}
           title={EXPERIENCE_DATA.title}
-          aside={EXPERIENCE_DATA.aside}
         />
       </section>
-      <section aria-labelledby="why-join-title">
+      <section>
         <FeatureList
+          lastChild={true}
           content={WHY_JOIN.list}
           title={WHY_JOIN.title}
-          aside={WHY_JOIN.aside}
         />
       </section>
 

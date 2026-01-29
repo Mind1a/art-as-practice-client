@@ -123,6 +123,17 @@ export const WHY_JOIN_LIST: FeatureItem[] = [
       },
     ],
   },
+  {
+    id: "exp-6",
+    icon: Art,
+    iconColour: "#373737",
+    content: [
+      {
+        text: "Join us and redefine what it means to be a creator in your world.",
+        isBold: true,
+      },
+    ],
+  },
 ]
 
 export const ABOUT_PARAGRAPHS: TextSegment[][] = [
@@ -141,11 +152,6 @@ export const ABOUT_PARAGRAPHS: TextSegment[][] = [
 export const WHY_JOIN = {
   title: "Why Join?",
   list: WHY_JOIN_LIST,
-  aside: {
-    label: "Join us and redefine what it means to be a creator in your world.",
-    icon: Art,
-    iconColour: "#373737",
-  },
 }
 
 export const INTRO_SECTION: IntroSectionData = {

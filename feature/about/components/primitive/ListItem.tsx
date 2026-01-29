@@ -15,11 +15,14 @@ const ListItem = ({
   iconColour,
 }: Props) => {
   return (
-    <li className="flex gap-4">
+    <li className={className}>
       <IconCopoment width="24" height="24" color={iconColour} />
       <div>
         {content.map((segment, index) => (
-          <span key={index} className={className}>
+          <span
+            key={index}
+            className="text-[14px] text-[#373737] lg:leading-[1.5] lg:tracking-[0.1em]"
+          >
             {segment.isBold ? (
               <strong className="font-semibold">{segment.text}</strong>
             ) : (
