@@ -157,6 +157,9 @@ export const WHY_JOIN = {
 export const INTRO_SECTION: IntroSectionData = {
   title: "Transform Your World Through Creativity",
   subTitle: "Awaken Your Potential with Art as Practice",
+  aside: {
+    content: "Limited-time mentorship opportunity available at a special rate!",
+  },
   article: [
     [
       { text: "Experience a " },

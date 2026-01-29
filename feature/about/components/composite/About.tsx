@@ -48,10 +48,10 @@ const About = () => {
           <ListItem
             iconColour="#373737"
             icon={Infinity}
-            className="text-[14px] text-[#373737] lg:leading-[1.5] lg:tracking-[0.1em]"
+            className="flex gap-4"
             content={[
               {
-                text: "Limited-time mentorship opportunity available at a special rate!",
+                text: INTRO_SECTION.aside.content,
                 isBold: true,
               },
             ]}

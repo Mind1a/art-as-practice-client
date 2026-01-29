@@ -17,11 +17,7 @@ import VectorLeft from "./svgs/Vector-Left.svg"
 import VectorRight from "./svgs/Vector-Right.svg"
 
 export const Images = {
-  mentors: {
-    main: mentorMain,
-  },
-  slider: [slide1, slide2, slide3],
-  svgs: [Infinity, Art, Book, Brush, Puzzle, Smile, User, Check],
+  slider: [slide1, slide2, slide3, slide1, slide2, slide3],
 }
 
 export {

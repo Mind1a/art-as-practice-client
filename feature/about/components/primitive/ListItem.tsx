@@ -16,12 +16,17 @@ const ListItem = ({
 }: Props) => {
   return (
     <li className={className}>
-      <IconCopoment width="24" height="24" color={iconColour} />
+      <IconCopoment
+        width="24"
+        height="24"
+        className="flex shrink-0"
+        color={iconColour}
+      />
       <div>
         {content.map((segment, index) => (
           <span
             key={index}
-            className="text-[14px] text-[#373737] lg:leading-[1.5] lg:tracking-[0.1em]"
+            className="text-[14px] break-words text-[#373737] lg:leading-[1.5] lg:tracking-[0.1em]"
           >
             {segment.isBold ? (
               <strong className="font-semibold">{segment.text}</strong>
