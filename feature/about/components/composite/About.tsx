@@ -86,6 +86,9 @@ const About = () => {
           />
         </div>
       </section>
+      <section>
+        <CustomSlider />
+      </section>
     </main>
   )
 }

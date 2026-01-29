@@ -10,7 +10,7 @@ export const MentorProfile = () => (
           MEET YOUR MENTOR
         </h1>
       </div>
-      <div className="group relative flex h-[500px] w-full max-w-[332px] flex-col p-7">
+      <div className="group relative flex w-full max-w-[332px] flex-col p-7">
         <div className="relative flex items-center justify-center overflow-hidden">
           <Image
             src={mentorMain}
