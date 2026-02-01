@@ -5,6 +5,7 @@ import { Infinity } from "feature/about/assets"
 import {
   ABOUT_PARAGRAPHS,
   EXPERIENCE_DATA,
+  EXPERIENCE_LIST,
   INTRO_SECTION,
   WHY_JOIN,
 } from "feature/about/data/data"
@@ -59,20 +60,24 @@ const About = () => {
         </aside>
       </section>
 
+      {/* Expirience List */}
       <section className="font-montserrat mx-auto mt-16 flex items-center justify-center px-6">
-        <FeatureList
-          lastChild={false}
-          content={EXPERIENCE_DATA.list}
-          title={EXPERIENCE_DATA.title}
-        />
+        <div className="flex w-full max-w-[913px] flex-col">
+          <h4 className="text-[24px] font-semibold text-[#1F3547] lg:text-[32px] lg:leading-[1.5] lg:tracking-widest">
+            {EXPERIENCE_DATA.title}
+          </h4>
+          <FeatureList lastChild={false} content={EXPERIENCE_DATA.list} />
+        </div>
       </section>
 
+      {/* Why Us List */}
       <section className="font-montserrat mx-auto mt-16 flex items-center justify-center px-6">
-        <FeatureList
-          lastChild={true}
-          content={WHY_JOIN.list}
-          title={WHY_JOIN.title}
-        />
+        <div className="flex w-full max-w-[913px] flex-col">
+          <h4 className="text-[24px] font-semibold text-[#1F3547] lg:text-[32px] lg:leading-[1.5] lg:tracking-widest">
+            {WHY_JOIN.title}
+          </h4>
+          <FeatureList lastChild={true} content={WHY_JOIN.list} />
+        </div>
       </section>
 
       <MentorProfile />
@@ -86,7 +91,6 @@ const About = () => {
         </div>
       </section>
 
-      <section>
       <section className="w-full bg-white px-4">
         <CustomSlider />
       </section>

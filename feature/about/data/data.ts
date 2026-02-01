@@ -1,5 +1,4 @@
 import {
-  Infinity,
   Art,
   Book,
   Brush,
@@ -9,6 +8,8 @@ import {
   User,
 } from "feature/about/assets"
 import { FeatureItem, IntroSectionData, TextSegment } from "../types/about"
+
+// Lists
 
 export const EXPERIENCE_LIST: FeatureItem[] = [
   {
@@ -136,23 +137,7 @@ export const WHY_JOIN_LIST: FeatureItem[] = [
   },
 ]
 
-export const ABOUT_PARAGRAPHS: TextSegment[][] = [
-  [
-    {
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lacus ex, malesuada nec dolor sed, tincidunt commodo enim. Donec egestas sodales erat, at lobortis purus placerat in. Etiam volutpat accumsan risus sed rutrum. Morbi vel faucibus dui, at tristique odio. Maecenas ornare sollicitudin erat dapibus elementum.",
-    },
-  ],
-  [
-    {
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lacus ex, malesuada nec dolor sed, tincidunt commodo enim. Donec egestas sodales erat, at lobortis purus placerat in. Etiam volutpat accumsan risus sed rutrum. Morbi vel faucibus dui, at tristique odio. Maecenas ornare sollicitudin erat dapibus elementum.",
-    },
-  ],
-]
-
-export const WHY_JOIN = {
-  title: "Why Join?",
-  list: WHY_JOIN_LIST,
-}
+// Main data
 
 export const INTRO_SECTION: IntroSectionData = {
   title: "Transform Your World Through Creativity",
@@ -171,7 +156,7 @@ export const INTRO_SECTION: IntroSectionData = {
     ],
     [
       { text: "Combining art, " },
-      { text: "mindfulness, and inner exploration ", isBold: true },
+      { text: "mindfulness, and inner exploration", isBold: true },
       {
         text: ", Wato Tsereteli's unique approach merges practical artistry with a ",
       },
@@ -227,9 +212,22 @@ export const INTRO_SECTION: IntroSectionData = {
 export const EXPERIENCE_DATA = {
   title: "What You'll Experience",
   list: EXPERIENCE_LIST,
-  aside: {
-    label: "",
-    icon: Infinity,
-    iconColour: "#373737",
-  },
 }
+
+export const WHY_JOIN = {
+  title: "Why Join?",
+  list: WHY_JOIN_LIST,
+}
+
+export const ABOUT_PARAGRAPHS: TextSegment[][] = [
+  [
+    {
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lacus ex, malesuada nec dolor sed, tincidunt commodo enim. Donec egestas sodales erat, at lobortis purus placerat in. Etiam volutpat accumsan risus sed rutrum. Morbi vel faucibus dui, at tristique odio. Maecenas ornare sollicitudin erat dapibus elementum.",
+    },
+  ],
+  [
+    {
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lacus ex, malesuada nec dolor sed, tincidunt commodo enim. Donec egestas sodales erat, at lobortis purus placerat in. Etiam volutpat accumsan risus sed rutrum. Morbi vel faucibus dui, at tristique odio. Maecenas ornare sollicitudin erat dapibus elementum.",
+    },
+  ],
+]

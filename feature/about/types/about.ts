@@ -1,5 +1,3 @@
-import { StaticImageData } from "next/image"
-
 export type TextSegment = {
   text: string
   isBold?: boolean
