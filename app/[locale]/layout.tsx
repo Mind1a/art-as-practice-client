@@ -4,7 +4,7 @@ import { hasLocale, NextIntlClientProvider } from "next-intl"
 
 import { getMessages } from "next-intl/server"
 
-import { Montserrat, Geist, Bai_Jamjuree, Inter } from "next/font/google"
+import { Geist } from "next/font/google"
 import { notFound } from "next/navigation"
 
 import "./globals.css"
@@ -15,22 +15,6 @@ import Header from "feature/landing/components/composities/Header"
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
-})
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-})
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  variable: "--font-montserrat",
-})
-
-const baiJamjuree = Bai_Jamjuree({
-  subsets: ["latin"],
-  weight: ["200", "300", "400", "500", "600", "700"], // Bai Jamjuree requires explicit weights
-  variable: "--font-bai-jamjuree",
 })
 
 export const metadata: Metadata = {
@@ -54,9 +38,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} className="scroll-smooth" suppressHydrationWarning>
-      <body
-        className={`${geistSans.variable} antialiased ${montserrat.variable} ${baiJamjuree.variable} ${inter.variable}`}
-      >
+      <body className={`${geistSans.variable} antialiased`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Header />
           {children}
