@@ -87,6 +87,7 @@ const About = () => {
       </section>
 
       <section>
+      <section className="w-full bg-white px-4">
         <CustomSlider />
       </section>
     </main>
