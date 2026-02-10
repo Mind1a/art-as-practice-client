@@ -1,0 +1,101 @@
+"use client"
+
+import React from "react"
+import { Infinity } from "feature/about/assets"
+import {
+  ABOUT_PARAGRAPHS,
+  EXPERIENCE_DATA,
+  EXPERIENCE_LIST,
+  INTRO_SECTION,
+  WHY_JOIN,
+} from "feature/about/data/data"
+
+import { MentorProfile } from "./MentorProfile"
+import FeatureList from "./FeatureList"
+import Description from "../primitive/Description"
+import ListItem from "../primitive/ListItem"
+import CustomSlider from "./CustomSlider"
+
+const About = () => {
+  return (
+    <main className="mx-auto w-full max-w-[1440px]">
+      <header className="border-b border-[#A8A8A8] p-6 py-[10px]">
+        <h1 className="font-bai-jamjuree text-[48px] leading-[72px] font-medium text-[#F2430D] md:text-[48px] lg:text-[175px] lg:leading-none">
+          About Us
+        </h1>
+      </header>
+
+      <section className="font-montserrat mt-14 flex flex-col items-center px-6">
+        <div className="mb-6 flex w-full max-w-[913px] lg:mb-7 lg:justify-center">
+          <h2 className="text-[24px] font-semibold text-[#1F3547] lg:text-[32px] lg:leading-[1.5] lg:tracking-widest">
+            {INTRO_SECTION.title}
+          </h2>
+        </div>
+
+        <article className="w-full max-w-[720px] self-start text-[#1F3547] lg:max-w-[913px] lg:self-center">
+          <h3 className="mb-4 text-[14px] font-bold lg:text-base lg:leading-[1.5] lg:tracking-widest">
+            {INTRO_SECTION.subTitle}
+          </h3>
+          <div className="space-y-4 lg:space-y-8">
+            <Description
+              className={
+                "text-[14px] lg:text-base lg:leading-[1.5] lg:tracking-[0.1em]"
+              }
+              paragraphs={INTRO_SECTION.article}
+            />
+          </div>
+        </article>
+        <aside className="mt-[24px] flex w-full max-w-[913px] items-center lg:mt-[28px]">
+          <ListItem
+            iconColour="#373737"
+            icon={Infinity}
+            className="flex gap-4"
+            content={[
+              {
+                text: INTRO_SECTION.aside.content,
+                isBold: true,
+              },
+            ]}
+          />
+        </aside>
+      </section>
+
+      {/* Expirience List */}
+      <section className="font-montserrat mx-auto mt-16 flex items-center justify-center px-6">
+        <div className="flex w-full max-w-[913px] flex-col">
+          <h4 className="text-[24px] font-semibold text-[#1F3547] lg:text-[32px] lg:leading-[1.5] lg:tracking-widest">
+            {EXPERIENCE_DATA.title}
+          </h4>
+          <FeatureList lastChild={false} content={EXPERIENCE_DATA.list} />
+        </div>
+      </section>
+
+      {/* Why Us List */}
+      <section className="font-montserrat mx-auto mt-16 flex items-center justify-center px-6">
+        <div className="flex w-full max-w-[913px] flex-col">
+          <h4 className="text-[24px] font-semibold text-[#1F3547] lg:text-[32px] lg:leading-[1.5] lg:tracking-widest">
+            {WHY_JOIN.title}
+          </h4>
+          <FeatureList lastChild={true} content={WHY_JOIN.list} />
+        </div>
+      </section>
+
+      <MentorProfile />
+
+      <section className="mt-[72px] mb-20 flex items-center justify-center px-6">
+        <div className="font-inter w-full max-w-[912px] space-y-12">
+          <Description
+            className="text-[14px] leading-[20px] lg:text-base lg:leading-[1.5] lg:tracking-widest"
+            paragraphs={ABOUT_PARAGRAPHS}
+          />
+        </div>
+      </section>
+
+      <section className="w-full bg-white px-4">
+        <CustomSlider />
+      </section>
+    </main>
+  )
+}
+
+export default About

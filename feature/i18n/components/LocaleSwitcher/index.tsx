@@ -6,10 +6,7 @@ const LocaleSwitcher = () => {
   const locale = useLocale()
   return (
     <div className="flex cursor-pointer items-center">
-      <LocaleSwitcherSelect
-        defaultValue={locale}
-        label="Select a Locale"
-      ></LocaleSwitcherSelect>
+      <LocaleSwitcherSelect label="Select a Locale"></LocaleSwitcherSelect>
     </div>
   )
 }
